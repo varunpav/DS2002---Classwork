@@ -18,7 +18,7 @@ SELECT customer.first_name, customer.last_name, COUNT(rental.rental_id) AS Total
 -- Store with the highest number of rentals
 SELECT inventory.store_id, COUNT(rental.rental_id) AS TotalRentals FROM rental 
     INNER JOIN inventory ON rental.inventory_id = inventory.inventory_id 
-GROUP BY inventory.store_id ORDER BY TotalRentals DESC;
+GROUP BY inventory.store_id ORDER BY TotalRentals DESC
 LIMIT 1;
 
 -- Most popular film category among customers
